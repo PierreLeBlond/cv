@@ -10,25 +10,25 @@ import puppeteer from 'puppeteer';
 	await page.goto('http://localhost:5173', {
 		waitUntil: 'networkidle0'
 	});
-	await page.setViewport({ width: 631, height: 893 });
-
-	await page.pdf({
-		path: 'cv-en.pdf',
-		printBackground: true,
-		width: '631px',
-		height: '893px'
-	});
-
-	await page.goto('http://localhost:5173/fr', {
-		waitUntil: 'networkidle0'
-	});
-	await page.setViewport({ width: 631, height: 893 });
+	await page.setViewport({ width: 681, height: 964 });
 
 	await page.pdf({
 		path: 'cv.pdf',
 		printBackground: true,
-		width: '631px',
-		height: '893px'
+		width: '681px',
+		height: '964px'
+	});
+
+	await page.goto('http://localhost:5173/en', {
+		waitUntil: 'networkidle0'
+	});
+	await page.setViewport({ width: 681, height: 964 });
+
+	await page.pdf({
+		path: 'cv-en.pdf',
+		printBackground: true,
+		width: '681px',
+		height: '964px'
 	});
 
 	await browser.close();
