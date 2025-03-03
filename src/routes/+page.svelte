@@ -52,8 +52,11 @@
 			<p class="text-sm">{m.xp_freelance()}</p>
 			<ul class="pl-4">
 				<li class="flex gap-2">
-					<a class="font-bold underline" href="https://3ducation.fr/nos-services/#maquette"
-						>{m.xp_freelance_3ducation()}</a
+					<a
+						class="font-bold underline"
+						target="_blank"
+						rel="noopener noreferrer"
+						href="https://3ducation.fr/nos-services/#maquette">{m.xp_freelance_3ducation()}</a
 					>
 					<p class="text-slate-600">{m.xp_freelance_3ducation_description()}</p>
 				</li>
@@ -62,17 +65,39 @@
 		</li>
 
 		<li class="flex flex-col">
+			<p class="text-sm">{m.volunter()}</p>
+			<ul class="pl-4">
+				<li class="flex gap-2">
+					<a
+						href="https://fanfarefeis.fr"
+						target="_blank"
+						rel="noopener noreferrer"
+						class="font-bold underline">{m.volunter_feis()}</a
+					>
+					<p class="text-slate-600">{m.volunter_feis_description()}</p>
+				</li>
+				<li class="flex gap-2">
+					<a
+						href="https://roidepique.fr"
+						target="_blank"
+						rel="noopener noreferrer"
+						class="font-bold underline">{m.volunter_roidepique()}</a
+					>
+					<p class="text-slate-600">{m.volunter_roidepique_description()}</p>
+				</li>
+			</ul>
+			<p class="text-slate-600">{m.volunter_date()}</p>
+		</li>
+
+		<li class="flex flex-col">
 			<p class="text-sm">{m.projects()}</p>
 			<ul class="pl-4">
 				<li class="flex gap-2">
-					<a href="https://pierreleblond.github.io/feis/build/" class="font-bold underline"
-						>{m.projects_feis()}</a
-					>
-					<p class="text-slate-600">{m.projects_feis_description()}</p>
-				</li>
-				<li class="flex gap-2">
-					<a href="https://pierrelespingal.com" class="font-bold underline"
-						>{m.projects_portfolio()}</a
+					<a
+						href="https://pierrelespingal.com"
+						target="_blank"
+						rel="noopener noreferrer"
+						class="font-bold underline">{m.projects_portfolio()}</a
 					>
 					<p class="text-slate-600">{m.projects_portfolio_description()}</p>
 				</li>
@@ -81,31 +106,22 @@
 					<p class="text-slate-600">{m.projects_teamup_description()}</p>
 				</li>
 				<li class="flex gap-2">
-					<a href="https://recipes.pierrelespingal.com" class="font-bold underline"
-						>{m.projects_recipes()}</a
+					<a
+						href="https://recipes.pierrelespingal.com"
+						target="_blank"
+						rel="noopener noreferrer"
+						class="font-bold underline">{m.projects_recipes()}</a
 					>
 					<p class="text-slate-600">{m.projects_recipes_description()}</p>
 				</li>
 				<li class="flex gap-2">
 					<a
+						target="_blank"
+						rel="noopener noreferrer"
 						href="https://ustom.pierrelespingal.com?encryptedWord=ced5d7a4605cdc937e&iv=dc942b84844f0a0c68da7c7f2c7b602e"
 						class="font-bold underline">{m.projects_ustom()}</a
 					>
 					<p class="text-slate-600">{m.projects_ustom_description()}</p>
-				</li>
-				<li class="flex gap-2">
-					<a href="https://quests.pierrelespingal.com" class="font-bold underline"
-						>{m.projects_quests()}</a
-					>
-					<p class="text-slate-600">{m.projects_quests_description()}</p>
-				</li>
-				<li class="flex gap-2">
-					<p class="font-bold">{m.projects_spaute()}</p>
-					<p class="text-slate-600">{m.projects_spaute_description()}</p>
-				</li>
-				<li class="flex gap-2">
-					<p class="font-bold">{m.projects_eyecare()}</p>
-					<p class="text-slate-600">{m.projects_eyecare_description()}</p>
 				</li>
 			</ul>
 			<p class="text-slate-600">{m.projects_date()}</p>
