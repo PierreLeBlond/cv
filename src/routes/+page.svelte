@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { base } from '$app/paths';
 	import * as m from '$lib/paraglide/messages.js';
+	import { localizeHref } from '$lib/paraglide/runtime';
 	import { MapPinIcon, MailIcon, HouseIcon } from 'lucide-svelte';
 </script>
 
@@ -193,7 +194,11 @@
 				>
 					{m.knowledge_french()}
 				</a>
-				<a data-sveltekit-reload href={`${base}/en`} class="flex items-center gap-2 underline">
+				<a
+					data-sveltekit-reload
+					href={localizeHref(`${base}/`, { locale: 'en' })}
+					class="flex items-center gap-2 underline"
+				>
 					{m.knowledge_english()}
 				</a>
 			</ul>

@@ -13,11 +13,11 @@ export default defineConfig({
 			strategy: ['url', 'cookie'],
 			urlPatterns: [
 				{
-					pattern: '/:path(.*)?',
+					pattern: `{${process.env.PUBLIC_BASE_PATH}}?/:path(.*)?`,
 					localized: [
-						['en', '/:path(.*)?/en'],
+						['en', `{${process.env.PUBLIC_BASE_PATH}}?/en/:path(.*)?`],
 						// ✅ make sure to match the least specific path last
-						['fr', '/:path(.*)?']
+						['fr', `{${process.env.PUBLIC_BASE_PATH}}?/:path(.*)?`]
 					]
 				}
 			]
