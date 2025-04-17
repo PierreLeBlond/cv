@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { base } from '$app/paths';
 	import * as m from '$lib/paraglide/messages.js';
 	import { MapPinIcon, MailIcon, HouseIcon } from 'lucide-svelte';
 </script>
@@ -40,7 +41,7 @@
 			class="float-left mr-8 h-32 w-32 rounded-full border-2 border-slate-900 bg-stone-50"
 			style:shape-outside="circle()"
 		>
-			<img src="/favicon.png" alt="profil" class="scale-95" />
+			<img src={`${base}/favicon.png`} alt="profil" class="scale-95" />
 		</div>
 		<p class="w-[110%] pt-4">
 			{m.description()}<br />{m.description_end()}
@@ -107,7 +108,7 @@
 				</li>
 				<li class="flex gap-2">
 					<a
-						href="https://recipes.pierrelespingal.com"
+						href="https://app.pierrelespingal.xyz/recipes"
 						target="_blank"
 						rel="noopener noreferrer"
 						class="font-bold underline">{m.projects_recipes()}</a
@@ -118,7 +119,7 @@
 					<a
 						target="_blank"
 						rel="noopener noreferrer"
-						href="https://ustom.pierrelespingal.com?encryptedWord=ced5d7a4605cdc937e&iv=dc942b84844f0a0c68da7c7f2c7b602e"
+						href="https://app.pierrelespingal.xyz/ustom?encryptedWord=ced5d7a4605cdc937e&iv=dc942b84844f0a0c68da7c7f2c7b602e"
 						class="font-bold underline">{m.projects_ustom()}</a
 					>
 					<p class="text-slate-600">{m.projects_ustom_description()}</p>
@@ -185,12 +186,16 @@
 	<ul class="flex flex-col gap-2">
 		<li class="flex flex-col">
 			<ul class="flex flex-col gap-1 pt-2 pl-4">
-				<li class="flex items-center gap-2 font-bold">
+				<a
+					data-sveltekit-reload
+					href={`${base}/`}
+					class="flex items-center gap-2 font-bold underline"
+				>
 					{m.knowledge_french()}
-				</li>
-				<li class="flex items-center gap-2">
+				</a>
+				<a data-sveltekit-reload href={`${base}/en`} class="flex items-center gap-2 underline">
 					{m.knowledge_english()}
-				</li>
+				</a>
 			</ul>
 		</li>
 
